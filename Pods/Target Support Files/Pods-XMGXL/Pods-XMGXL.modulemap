@@ -1,0 +1,6 @@
+framework module Pods_XMGXL {
+  umbrella header "Pods-XMGXL-umbrella.h"
+
+  export *
+  module * { export * }
+}
