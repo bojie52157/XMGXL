@@ -44,10 +44,10 @@ class BaseTableViewController: UITableViewController {
     ///监听登录按钮点击
     @objc private func loginBtnClick(){
         //1.初始化OAuth.storyboard
-        let oauth = UIStoryboard(name: "OAuth", bundle: nil)
-        let sb = oauth.instantiateInitialViewController()!
+        let sb = UIStoryboard(name: "OAuth", bundle: nil)
+        let vc = sb.instantiateInitialViewController()!
         //2.弹出视图
-        present(sb, animated: true, completion: nil)
+        present(vc, animated: true, completion: nil)
     }
     ///监听注册按钮点击
     @objc private func registerBtnClick(){

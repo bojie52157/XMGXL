@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		726D086EC69530C5803246F9 /* Pods_XMGXL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C00A434E28B0B79C84C6963 /* Pods_XMGXL.framework */; };
 		7FB15620BB2DB73166B4B73F /* Pods_XMGXLUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEB9CF34FCCC68F142F7B006 /* Pods_XMGXLUITests.framework */; };
 		A00BF268237A43FD0014D16F /* XMGPresentationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00BF267237A43FD0014D16F /* XMGPresentationManager.swift */; };
 		A00BF26D237A5AB30014D16F /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00BF26C237A5AB30014D16F /* QRCodeViewController.swift */; };
@@ -36,10 +37,12 @@
 		A0DB130E23409E7C00876B01 /* Null.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0DB130B23409E7C00876B01 /* Null.storyboard */; };
 		A0DB130F23409E7C00876B01 /* NullViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DB130C23409E7C00876B01 /* NullViewController.swift */; };
 		A0DEDB43237BBC0B00B7C726 /* QRCodeCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DEDB42237BBC0B00B7C726 /* QRCodeCreateViewController.swift */; };
-		A0DEDB45237BF9C000B7C726 /* OAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DEDB44237BF9C000B7C726 /* OAuthViewController.swift */; };
-		A0DEDB47237BF9CC00B7C726 /* OAuth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0DEDB46237BF9CC00B7C726 /* OAuth.storyboard */; };
 		A0E3DCD4236D22E4003C8EAC /* Popover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0E3DCD3236D22E4003C8EAC /* Popover.storyboard */; };
 		A0E3DCD6236D4117003C8EAC /* XMGPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E3DCD5236D4117003C8EAC /* XMGPresentationController.swift */; };
+		A0FEF5EA237D50A9004D472C /* OAuth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0FEF5E8237D50A9004D472C /* OAuth.storyboard */; };
+		A0FEF5EB237D50A9004D472C /* OAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FEF5E9237D50A9004D472C /* OAuthViewController.swift */; };
+		A0FEF5ED237D530A004D472C /* NetworkTolls.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FEF5EC237D530A004D472C /* NetworkTolls.swift */; };
+		CD9A6FEC8F3A21CF4D075BD6 /* Pods_XMGXLTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 590C01ADAC0CC0A2CB892789 /* Pods_XMGXLTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,8 @@
 
 /* Begin PBXFileReference section */
 		2B803F872AA9D70C2B185EA7 /* Pods-XMGXLTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XMGXLTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XMGXLTests/Pods-XMGXLTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2C00A434E28B0B79C84C6963 /* Pods_XMGXL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XMGXL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		590C01ADAC0CC0A2CB892789 /* Pods_XMGXLTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XMGXLTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B24DBCA1658554A2E0ADA6D /* Pods-XMGXL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XMGXL.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XMGXL/Pods-XMGXL.debug.xcconfig"; sourceTree = "<group>"; };
 		7AE4FEB654413BF111FBD0A7 /* Pods-XMGXLUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XMGXLUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XMGXLUITests/Pods-XMGXLUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A00BF267237A43FD0014D16F /* XMGPresentationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMGPresentationManager.swift; sourceTree = "<group>"; };
@@ -97,10 +102,11 @@
 		A0DB130B23409E7C00876B01 /* Null.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Null.storyboard; sourceTree = "<group>"; };
 		A0DB130C23409E7C00876B01 /* NullViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NullViewController.swift; sourceTree = "<group>"; };
 		A0DEDB42237BBC0B00B7C726 /* QRCodeCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeCreateViewController.swift; sourceTree = "<group>"; };
-		A0DEDB44237BF9C000B7C726 /* OAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthViewController.swift; sourceTree = "<group>"; };
-		A0DEDB46237BF9CC00B7C726 /* OAuth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OAuth.storyboard; sourceTree = "<group>"; };
 		A0E3DCD3236D22E4003C8EAC /* Popover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Popover.storyboard; sourceTree = "<group>"; };
 		A0E3DCD5236D4117003C8EAC /* XMGPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMGPresentationController.swift; sourceTree = "<group>"; };
+		A0FEF5E8237D50A9004D472C /* OAuth.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = OAuth.storyboard; sourceTree = "<group>"; };
+		A0FEF5E9237D50A9004D472C /* OAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthViewController.swift; sourceTree = "<group>"; };
+		A0FEF5EC237D530A004D472C /* NetworkTolls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTolls.swift; sourceTree = "<group>"; };
 		AEB9CF34FCCC68F142F7B006 /* Pods_XMGXLUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XMGXLUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B33EA4EBFEEDABB8B7E19DA8 /* Pods-XMGXLUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XMGXLUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-XMGXLUITests/Pods-XMGXLUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E7A2FEB1E54C7F270738F520 /* Pods-XMGXL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XMGXL.release.xcconfig"; path = "Pods/Target Support Files/Pods-XMGXL/Pods-XMGXL.release.xcconfig"; sourceTree = "<group>"; };
@@ -112,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				726D086EC69530C5803246F9 /* Pods_XMGXL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD9A6FEC8F3A21CF4D075BD6 /* Pods_XMGXLTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +145,8 @@
 			isa = PBXGroup;
 			children = (
 				AEB9CF34FCCC68F142F7B006 /* Pods_XMGXLUITests.framework */,
+				2C00A434E28B0B79C84C6963 /* Pods_XMGXL.framework */,
+				590C01ADAC0CC0A2CB892789 /* Pods_XMGXLTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -218,9 +228,9 @@
 		A0DB12A02340837C00876B01 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A0DB12B12340837C00876B01 /* Tools */,
 				A0DB12FE2340845800876B01 /* Main */,
 				A0DB12A12340837C00876B01 /* Home */,
-				A0DB12B12340837C00876B01 /* Tools */,
 				A0DB12B92340837C00876B01 /* Discover */,
 				A0DB12BC2340837C00876B01 /* OAuth */,
 				A0DB12C02340837C00876B01 /* Newfeature */,
@@ -248,6 +258,7 @@
 				A0AE25B72341F25600C4C22C /* UIBarButtonItem+Extension.swift */,
 				A0AE25A52341A51700C4C22C /* UIButton+Extension.swift */,
 				A0AE25B92341F7CC00C4C22C /* TitleButton.swift */,
+				A0FEF5EC237D530A004D472C /* NetworkTolls.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -264,8 +275,8 @@
 		A0DB12BC2340837C00876B01 /* OAuth */ = {
 			isa = PBXGroup;
 			children = (
-				A0DEDB44237BF9C000B7C726 /* OAuthViewController.swift */,
-				A0DEDB46237BF9CC00B7C726 /* OAuth.storyboard */,
+				A0FEF5E8237D50A9004D472C /* OAuth.storyboard */,
+				A0FEF5E9237D50A9004D472C /* OAuthViewController.swift */,
 			);
 			path = OAuth;
 			sourceTree = "<group>";
@@ -347,6 +358,7 @@
 				A09D808A2340632F00062C9B /* Sources */,
 				A09D808B2340632F00062C9B /* Frameworks */,
 				A09D808C2340632F00062C9B /* Resources */,
+				E29ECDB949ED57F5BFD3A6F9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -450,7 +462,7 @@
 				A0AE25AA2341AA2F00C4C22C /* Home.storyboard in Resources */,
 				A0AE25B02341AA7C00C4C22C /* Profile.storyboard in Resources */,
 				A09D80992340632F00062C9B /* Assets.xcassets in Resources */,
-				A0DEDB47237BF9CC00B7C726 /* OAuth.storyboard in Resources */,
+				A0FEF5EA237D50A9004D472C /* OAuth.storyboard in Resources */,
 				A0DB130E23409E7C00876B01 /* Null.storyboard in Resources */,
 				A00BF26F237A87270014D16F /* QRCode.storyboard in Resources */,
 				A0AE25AC2341AA4C00C4C22C /* Message.storyboard in Resources */,
@@ -532,6 +544,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E29ECDB949ED57F5BFD3A6F9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-XMGXL/Pods-XMGXL-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XMGXL/Pods-XMGXL-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -549,11 +579,12 @@
 				A0DB1304234084E700876B01 /* MessageTableViewController.swift in Sources */,
 				A0AE25B82341F25600C4C22C /* UIBarButtonItem+Extension.swift in Sources */,
 				A0DB13082340850700876B01 /* DiscoverTableViewController.swift in Sources */,
-				A0DEDB45237BF9C000B7C726 /* OAuthViewController.swift in Sources */,
+				A0FEF5EB237D50A9004D472C /* OAuthViewController.swift in Sources */,
 				A00BF268237A43FD0014D16F /* XMGPresentationManager.swift in Sources */,
 				A0AE25A62341A51700C4C22C /* UIButton+Extension.swift in Sources */,
 				A0AE25B62341B08B00C4C22C /* VisitorView.swift in Sources */,
 				A0DB13002340848600876B01 /* MainViewController.swift in Sources */,
+				A0FEF5ED237D530A004D472C /* NetworkTolls.swift in Sources */,
 				A0AE25BA2341F7CC00C4C22C /* TitleButton.swift in Sources */,
 				A0E3DCD6236D4117003C8EAC /* XMGPresentationController.swift in Sources */,
 				A0DB130F23409E7C00876B01 /* NullViewController.swift in Sources */,
