@@ -8,6 +8,8 @@ target 'XMGXL' do
   use_frameworks!
 
  pod 'AFNetworking'
+ pod 'SVProgressHUD'
+ pod 'SDWebImage'
 
 
   target 'XMGXLTests' do

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8n4-fL-Rwr">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Welcome View Controller-->
+        <scene sceneID="rJm-xK-ctD">
+            <objects>
+                <viewController id="8n4-fL-Rwr" customClass="WelcomeViewController" customModule="XMGXL" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6ul-Z0-0ad">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ad_background" translatesAutoresizingMaskIntoConstraints="NO" id="Daz-UA-eCR">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar_default_big" translatesAutoresizingMaskIntoConstraints="NO" id="qLZ-KN-26o">
+                                <rect key="frame" x="162" y="488" width="90" height="90"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="欢迎回来" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R2Z-pa-QxR">
+                                <rect key="frame" x="166" y="588" width="82" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" systemColor="systemGrayColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Daz-UA-eCR" secondAttribute="bottom" id="5Ff-ou-xAn"/>
+                            <constraint firstItem="qLZ-KN-26o" firstAttribute="centerX" secondItem="Daz-UA-eCR" secondAttribute="centerX" id="5hj-4F-vZl"/>
+                            <constraint firstItem="qLZ-KN-26o" firstAttribute="leading" secondItem="YvB-0H-SyO" secondAttribute="leading" constant="162" id="QeB-lu-EqB"/>
+                            <constraint firstItem="Daz-UA-eCR" firstAttribute="leading" secondItem="6ul-Z0-0ad" secondAttribute="leading" id="VOy-Je-7mq"/>
+                            <constraint firstItem="Daz-UA-eCR" firstAttribute="top" secondItem="6ul-Z0-0ad" secondAttribute="top" id="WLm-7X-43b"/>
+                            <constraint firstItem="R2Z-pa-QxR" firstAttribute="centerX" secondItem="qLZ-KN-26o" secondAttribute="centerX" id="hdN-ec-jHJ"/>
+                            <constraint firstAttribute="trailing" secondItem="Daz-UA-eCR" secondAttribute="trailing" id="iwS-Xh-yKs"/>
+                            <constraint firstAttribute="bottom" secondItem="qLZ-KN-26o" secondAttribute="bottom" constant="318" id="maa-i7-HtY"/>
+                            <constraint firstItem="R2Z-pa-QxR" firstAttribute="top" secondItem="qLZ-KN-26o" secondAttribute="bottom" constant="10" id="mgR-Al-9jg"/>
+                            <constraint firstItem="qLZ-KN-26o" firstAttribute="top" secondItem="YvB-0H-SyO" secondAttribute="top" constant="444" id="v3P-EM-z53"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YvB-0H-SyO"/>
+                    </view>
+                    <connections>
+                        <outlet property="iconBottomCons" destination="maa-i7-HtY" id="oSl-H5-vce"/>
+                        <outlet property="iconImageVIew" destination="qLZ-KN-26o" id="2Wz-ee-3Yd"/>
+                        <outlet property="titleLabel" destination="R2Z-pa-QxR" id="HJo-xB-vKn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tDy-fb-9Rp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-7.2463768115942031" y="67.633928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ad_background" width="320" height="480"/>
+        <image name="avatar_default_big" width="85" height="85"/>
+    </resources>
+</document>

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class OAuthViewController: UIViewController {
 
@@ -16,7 +17,7 @@ class OAuthViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // 1.定义字符串保存登录界面URL
-        let urlStr = "https://api.weibo.com/oauth2/authorize?client_id=3117451778&redirect_uri=http://www.baidu.com"
+        let urlStr = "https://api.weibo.com/oauth2/authorize?client_id=\(WB_App_Key)&redirect_uri=\(WB_Redirect_url)"
         // 2.创建URL
         guard let url = NSURL(string: urlStr) else
         {
@@ -35,6 +36,16 @@ class OAuthViewController: UIViewController {
     
     }
 extension OAuthViewController: UIWebViewDelegate{
+    
+    func webViewDidStartLoad(_ webView: UIWebView) {
+        //显示提醒
+        SVProgressHUD.showInfo(withStatus: "正在加载...", maskType: SVProgressHUDMaskType.black)
+    }
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        //关闭提醒
+        SVProgressHUD.dismiss()
+    }
+    
     // 该方法每次请求都会调用
       // 如果返回false代表不允许请求, 如果返回true代表允许请求
     func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
@@ -48,28 +59,54 @@ extension OAuthViewController: UIWebViewDelegate{
         2.如果授权回调页面包含code=就代表授权成功, 需要截取code=后面字符串
         3.而且如果是授权回调页面不需要显示给用户看, 返回false
         */
-        // 1.判断当前是否是授权回调页面
-        guard let urlStr = request.url?.absoluteString else
-        {
-            return false
+       
+    // 1.判断当前是否是授权回调页面
+          guard let urlStr = request.url?.absoluteString else
+          {
+              return false
+          }
+          if !urlStr.hasPrefix("http://www.520it.com/")
+          {
+              SZXLog(message:"不是授权回调页面")
+              return true
+          }
+          
+          SZXLog(message:"是授权回调页面")
+          // 2.判断授权回调地址中是否包含code=
+          // URL的query属性是专门用于获取URL中的参数的, 可以获取URL中?后面的所有内容
+          let key = "code="
+    print(urlStr)
+    if (request.url?.query?.hasPrefix(key))!
+          {
+            let code = request.url!.query?.substring(from: key.endIndex)
+            loadAccessToken(codeStr: code)
+              return false
+          }
+//          SZXLog(message:"授权失败")
+          return false
+      }
+
+    ///利用RequestToken换取AccessToken
+    private func loadAccessToken(codeStr: String?){
+        guard let code = codeStr else {
+            return
         }
-        if !urlStr.hasPrefix("http://www.baidu.com/")
-        {
-            NSLog("不是授权回调页面")
-            return true
+//        SZXLog(message:"换取token")
+        //1.准备路径
+        let path = "oauth2/access_token"
+        //2.准备参数
+        let parameters = ["client_id":WB_App_Key,"client_secret":WB_App_Secret,"grant_type":"authorization_code","code":code,"redirect_uri":WB_Redirect_url]
+        //3.发送请求
+        NetworkTolls.sharedInstance.post(path, parameters: parameters, progress: nil, success: { (task:URLSessionDataTask, dict:Any?) in
+            //1.将授权信息转换为模型
+            let account = UserAccount(dict: dict as! [String : AnyObject])
+            //2.获取授权信息
+            account.loadUserInfo { (UserAccount, Error) in
+                account.saveAccount()
+            }
+        }) { (task:URLSessionDataTask?,error: Error) in
+            print(error)
         }
-        
-        NSLog("是授权回调页面")
-        // 2.判断授权回调地址中是否包含code=
-        // URL的query属性是专门用于获取URL中的参数的, 可以获取URL中?后面的所有内容
-        let key = "code="
-        if urlStr.contains(key)
-        {
-            let code = (request.url!.query?.substring(from: key.endIndex))
-            NSLog(code!)
-            return false
-        }
-        NSLog("授权失败")
-        return false
     }
+
 }

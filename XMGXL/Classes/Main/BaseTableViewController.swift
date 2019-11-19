@@ -17,7 +17,7 @@ import UIKit
 class BaseTableViewController: UITableViewController {
     
     //定义标记记录用户登录状态
-    var isLogin = false
+    var isLogin = UserAccount.isLoginWB()
     //访客视图
     var visitorView : VisitorView?
     

@@ -84,7 +84,8 @@ class HomeTableViewController: BaseTableViewController {
     ///标题按钮
     private lazy var titleButton:TitleButton = {
         let btn = TitleButton()
-        btn.setTitle("小情调", for: UIControlState.normal)
+        let title = UserAccount.loadUserAccount()?.screen_name
+        btn.setTitle(title, for: UIControlState.normal)
         btn.addTarget(self, action: #selector(titleBtnClick), for: UIControlEvents.touchUpInside)
         return btn
     }()

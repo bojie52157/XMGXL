@@ -8,10 +8,7 @@
 
 import UIKit
 
-///自定义转场的展现
-let XMGPresentationManagerDidPresented = "XMGPresentationManagerDidPresented"
-///自定义转场的消失
-let XMGPresentationManagerDidDismiss = "XMGPresentationManagerDidDismiss"
+
 
 class XMGPresentationManager: NSObject ,UIViewControllerTransitioningDelegate ,UIViewControllerAnimatedTransitioning{
     //定义标记记录当前是否是展现
