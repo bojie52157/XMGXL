@@ -19,3 +19,5 @@ let WB_Redirect_url = "http://www.520it.com"
 let XMGPresentationManagerDidPresented = "XMGPresentationManagerDidPresented"
 ///自定义转场的消失
 let XMGPresentationManagerDidDismiss = "XMGPresentationManagerDidDismiss"
+///切换根控制器的通知
+let XMGRooterViewController = "XMGRooterViewController"

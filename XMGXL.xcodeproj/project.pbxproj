@@ -16,6 +16,8 @@
 		A00BF26F237A87270014D16F /* QRCode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A00BF26E237A87270014D16F /* QRCode.storyboard */; };
 		A01AA35F2383D46E00911C4C /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01AA35E2383D46E00911C4C /* WelcomeViewController.swift */; };
 		A01AA3612383D47800911C4C /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A01AA3602383D47800911C4C /* Welcome.storyboard */; };
+		A054698A23862576005FEAF0 /* NewfeatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A054698923862576005FEAF0 /* NewfeatureViewController.swift */; };
+		A054699023863AFA005FEAF0 /* Newfeature.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A054698F23863AFA005FEAF0 /* Newfeature.storyboard */; };
 		A09D80922340632F00062C9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D80912340632F00062C9B /* AppDelegate.swift */; };
 		A09D80992340632F00062C9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A09D80982340632F00062C9B /* Assets.xcassets */; };
 		A09D80A72340632F00062C9B /* XMGXLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D80A62340632F00062C9B /* XMGXLTests.swift */; };
@@ -80,6 +82,8 @@
 		A00BF26E237A87270014D16F /* QRCode.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = QRCode.storyboard; sourceTree = "<group>"; };
 		A01AA35E2383D46E00911C4C /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		A01AA3602383D47800911C4C /* Welcome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
+		A054698923862576005FEAF0 /* NewfeatureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewfeatureViewController.swift; sourceTree = "<group>"; };
+		A054698F23863AFA005FEAF0 /* Newfeature.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Newfeature.storyboard; sourceTree = "<group>"; };
 		A09D808E2340632F00062C9B /* XMGXL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XMGXL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A09D80912340632F00062C9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A09D80982340632F00062C9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -299,6 +303,8 @@
 			children = (
 				A01AA35E2383D46E00911C4C /* WelcomeViewController.swift */,
 				A01AA3602383D47800911C4C /* Welcome.storyboard */,
+				A054698923862576005FEAF0 /* NewfeatureViewController.swift */,
+				A054698F23863AFA005FEAF0 /* Newfeature.storyboard */,
 			);
 			path = Newfeature;
 			sourceTree = "<group>";
@@ -483,6 +489,7 @@
 				A00BF26F237A87270014D16F /* QRCode.storyboard in Resources */,
 				A0AE25AC2341AA4C00C4C22C /* Message.storyboard in Resources */,
 				A0AE25AE2341AA6000C4C22C /* Discover.storyboard in Resources */,
+				A054699023863AFA005FEAF0 /* Newfeature.storyboard in Resources */,
 				A0AE25A82341A7AE00C4C22C /* Main.storyboard in Resources */,
 				A0E3DCD4236D22E4003C8EAC /* Popover.storyboard in Resources */,
 				A0AE25B52341B08B00C4C22C /* VisitorView.xib in Resources */,
@@ -570,12 +577,14 @@
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -611,6 +620,7 @@
 				A0FEF5ED237D530A004D472C /* NetworkTolls.swift in Sources */,
 				A0AE25BA2341F7CC00C4C22C /* TitleButton.swift in Sources */,
 				A0E3DCD6236D4117003C8EAC /* XMGPresentationController.swift in Sources */,
+				A054698A23862576005FEAF0 /* NewfeatureViewController.swift in Sources */,
 				A0DB130F23409E7C00876B01 /* NullViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -765,6 +775,7 @@
 				INFOPLIST_FILE = XMGXL/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = www.sunzexin.com.XMGXL;
 				PRODUCT_NAME = XMGXL;
 				SWIFT_VERSION = 4.0;
@@ -783,6 +794,7 @@
 				INFOPLIST_FILE = XMGXL/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = www.sunzexin.com.XMGXL;
 				PRODUCT_NAME = XMGXL;
 				SWIFT_VERSION = 4.0;

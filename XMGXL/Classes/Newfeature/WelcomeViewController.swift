@@ -42,7 +42,13 @@ class WelcomeViewController: UIViewController {
             UIView.animate(withDuration: 2.0, animations: {
                 self.titleLabel.alpha = 1.0
             }) { (_) in
-                
+                //4跳转到首页
+                /*
+                let sb = UIStoryboard(name: "Main", bundle: nil)
+                let vc = sb.instantiateInitialViewController()!
+                UIApplication.shared.keyWindow?.rootViewController = vc
+                */
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "XMGRooterViewController"), object: true)
             }
         }
     }

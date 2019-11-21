@@ -10,6 +10,7 @@ target 'XMGXL' do
  pod 'AFNetworking'
  pod 'SVProgressHUD'
  pod 'SDWebImage'
+ pod 'SnapKit'
 
 
   target 'XMGXLTests' do

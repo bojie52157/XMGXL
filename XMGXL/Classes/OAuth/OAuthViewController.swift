@@ -13,6 +13,7 @@ class OAuthViewController: UIViewController {
 
     /// 网页容器
     @IBOutlet weak var customWebView: UIWebView!
+  
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,13 +26,19 @@ class OAuthViewController: UIViewController {
         }
         // 3.创建Request
         let request = NSURLRequest(url: url as URL)
-        
         // 4.加载登录界面
-        
         customWebView.loadRequest(request as URLRequest)
         customWebView.delegate = self
     }
-
+    //MARK:-内部控制方法
+    @IBAction func closeBtnClick() {
+        dismiss(animated: true, completion: nil)
+      }
+    @IBAction func autoBtnClick() {
+        //使用js代码自动填充账号
+        let jsStr = "document.getElementById('userId').value = '674504183@qq.com'"
+        customWebView.stringByEvaluatingJavaScript(from: jsStr)
+      }
   
     
     }
@@ -102,7 +109,17 @@ extension OAuthViewController: UIWebViewDelegate{
             let account = UserAccount(dict: dict as! [String : AnyObject])
             //2.获取授权信息
             account.loadUserInfo { (UserAccount, Error) in
+                //3.保存用户信息
                 account.saveAccount()
+                //4跳转到欢迎界面
+                /*
+                let sb = UIStoryboard(name: "Welcome", bundle: nil)
+                let vc = sb.instantiateInitialViewController()!
+                UIApplication.shared.keyWindow?.rootViewController = vc
+                 */
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "XMGRooterViewController"), object: false)
+                //关闭界面
+                self.closeBtnClick()
             }
         }) { (task:URLSessionDataTask?,error: Error) in
             print(error)
