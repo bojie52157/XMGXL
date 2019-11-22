@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class HomeTableViewController: BaseTableViewController {
 
@@ -24,11 +25,32 @@ class HomeTableViewController: BaseTableViewController {
         //3.注册通知
         NotificationCenter.default.addObserver(self, selector: #selector(titleChange), name: NSNotification.Name(rawValue: XMGPresentationManagerDidPresented), object: animatorManager)
         NotificationCenter.default.addObserver(self, selector: #selector(titleChange), name: NSNotification.Name(rawValue: XMGPresentationManagerDidDismiss), object: animatorManager)
+        //4.获取微博数据
+        loadData()
     }
 
     deinit {
         //移除通知
         NotificationCenter.default.removeObserver(self)
+    }
+    
+    //MARK:-获取微博数据
+    private func loadData(){
+        NetworkTolls.sharedInstance.loadStatuses { (array, error) in
+            //1.校验
+            if error != nil {
+                SVProgressHUD.showError(withStatus: "加载不到数据...")
+            }
+            guard let arr = array else{
+                return
+            }
+            //2.将字典数组转换为模型数组
+            var model = [Status]()
+            for dict in arr{
+                let status = Status(dict: dict)
+                model.append(status)
+            }
+        }
     }
     
     //MARK:设置导航条

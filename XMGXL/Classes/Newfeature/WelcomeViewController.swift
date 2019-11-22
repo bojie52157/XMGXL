@@ -35,7 +35,7 @@ class WelcomeViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         //1.让头像执行动画
-        iconBottomCons.constant = (UIScreen.main.bounds.height - iconBottomCons.constant)
+        iconBottomCons.constant = (UIScreen.main.bounds.height - iconBottomCons.constant) + 20
         UIView.animate(withDuration: 2.0, animations: {
             self.view.layoutIfNeeded()
         }) { (_) in

@@ -18,6 +18,8 @@
 		A01AA3612383D47800911C4C /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A01AA3602383D47800911C4C /* Welcome.storyboard */; };
 		A054698A23862576005FEAF0 /* NewfeatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A054698923862576005FEAF0 /* NewfeatureViewController.swift */; };
 		A054699023863AFA005FEAF0 /* Newfeature.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A054698F23863AFA005FEAF0 /* Newfeature.storyboard */; };
+		A0837F262387BA18008C3C89 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0837F252387BA18008C3C89 /* Status.swift */; };
+		A0837F282387DA6A008C3C89 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0837F272387DA6A008C3C89 /* User.swift */; };
 		A09D80922340632F00062C9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D80912340632F00062C9B /* AppDelegate.swift */; };
 		A09D80992340632F00062C9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A09D80982340632F00062C9B /* Assets.xcassets */; };
 		A09D80A72340632F00062C9B /* XMGXLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D80A62340632F00062C9B /* XMGXLTests.swift */; };
@@ -84,6 +86,8 @@
 		A01AA3602383D47800911C4C /* Welcome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
 		A054698923862576005FEAF0 /* NewfeatureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewfeatureViewController.swift; sourceTree = "<group>"; };
 		A054698F23863AFA005FEAF0 /* Newfeature.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Newfeature.storyboard; sourceTree = "<group>"; };
+		A0837F252387BA18008C3C89 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		A0837F272387DA6A008C3C89 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A09D808E2340632F00062C9B /* XMGXL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XMGXL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A09D80912340632F00062C9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A09D80982340632F00062C9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -261,6 +265,8 @@
 				A00BF269237A57CE0014D16F /* QRCode */,
 				A0E3DCD2236D229D003C8EAC /* Popover */,
 				A0DB1301234084C500876B01 /* HomeTableViewController.swift */,
+				A0837F252387BA18008C3C89 /* Status.swift */,
+				A0837F272387DA6A008C3C89 /* User.swift */,
 				A0AE25A92341AA2F00C4C22C /* Home.storyboard */,
 			);
 			path = Home;
@@ -598,7 +604,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0837F282387DA6A008C3C89 /* User.swift in Sources */,
 				A0DEDB43237BBC0B00B7C726 /* QRCodeCreateViewController.swift in Sources */,
+				A0837F262387BA18008C3C89 /* Status.swift in Sources */,
 				A0AE25B22341ADBB00C4C22C /* BaseTableViewController.swift in Sources */,
 				A0DB1302234084C500876B01 /* HomeTableViewController.swift in Sources */,
 				A00BF26D237A5AB30014D16F /* QRCodeViewController.swift in Sources */,
