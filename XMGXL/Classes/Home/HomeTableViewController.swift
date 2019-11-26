@@ -11,6 +11,13 @@ import SVProgressHUD
 
 class HomeTableViewController: BaseTableViewController {
 
+    ///保存所有的微博数据
+    var statuses: [StatusViewModel]?{
+        didSet{
+            tableView.reloadData()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //1.判断用户是否登录
@@ -44,12 +51,16 @@ class HomeTableViewController: BaseTableViewController {
             guard let arr = array else{
                 return
             }
+//            SZXLog(message: arr)
             //2.将字典数组转换为模型数组
-            var model = [Status]()
+            var model = [StatusViewModel]()
             for dict in arr{
                 let status = Status(dict: dict)
-                model.append(status)
+                let viewModel = StatusViewModel(status: status)
+                model.append(viewModel)
             }
+            //3.保存数据
+            self.statuses = model
         }
     }
     
@@ -113,4 +124,18 @@ class HomeTableViewController: BaseTableViewController {
     }()
 }
 
-
+//MARK:- tableView代理方法
+extension HomeTableViewController{
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return statuses?.count ?? 0
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        //1.取出cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "homeCell", for: indexPath) as! HomeTableViewCell
+        //2.设置数据
+        cell.viewModel = statuses![indexPath.row]
+        //3.返回cell
+        return cell
+    }
+}

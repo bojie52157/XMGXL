@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Ox2-eM-KS2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Ox2-eM-KS2">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="homeCell" rowHeight="199" id="ZfP-6N-AU9" customClass="HomeTableViewCell" customModule="XMGXL" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="homeCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="homeCell" rowHeight="199" id="ZfP-6N-AU9" customClass="HomeTableViewCell" customModule="XMGXL" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="199"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZfP-6N-AU9" id="Kei-Hk-hyK">
@@ -134,13 +134,13 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.65860605409999995" green="1" blue="0.84226120240000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <outlet property="contentLabel" destination="rsX-ml-8LA" id="hcB-pZ-h6c"/>
-                                    <outlet property="iconImageView" destination="mBw-sg-aT4" id="2ug-ez-g1y"/>
-                                    <outlet property="nameLabel" destination="UVx-oc-kAJ" id="JkC-Pm-YQJ"/>
-                                    <outlet property="sourceLabel" destination="17a-h4-nea" id="Wh7-Vh-M3b"/>
-                                    <outlet property="timeLabel" destination="8uB-5F-5AU" id="Oj3-2O-R1p"/>
-                                    <outlet property="verifiedImageVIew" destination="TwP-fk-Q8w" id="Ihc-UI-guX"/>
-                                    <outlet property="vipImageView" destination="k06-oi-IcT" id="STI-4N-47y"/>
+                                    <outlet property="contentLabel" destination="rsX-ml-8LA" id="r43-Hh-QI0"/>
+                                    <outlet property="iconImageView" destination="mBw-sg-aT4" id="g5K-GR-Gqz"/>
+                                    <outlet property="nameLabel" destination="UVx-oc-kAJ" id="L3o-Ow-Aii"/>
+                                    <outlet property="sourceLaebl" destination="17a-h4-nea" id="6GA-O7-xHS"/>
+                                    <outlet property="timeLabel" destination="8uB-5F-5AU" id="AXZ-Vz-2sf"/>
+                                    <outlet property="verifiedImageView" destination="TwP-fk-Q8w" id="VGs-QY-RKg"/>
+                                    <outlet property="vipImageVIew" destination="k06-oi-IcT" id="GEv-LI-t4I"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

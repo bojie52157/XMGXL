@@ -11,15 +11,43 @@ import UIKit
 class Status: NSObject {
     
     /// 微博创建时间
-    var created_at: String?
+    @objc var created_at: String?
+//        {
+//        didSet{
+//            if let timeStr = created_at, timeStr != "" {
+//                //1.将服务器返回的时间格式化NSDate
+//                let createDate = NSDate.createDate(timeStr: timeStr, formatterStr: "EE MM dd HH:mm:ss Z yyyy")
+//                //2.生成发布微博时间对应的字符串
+//                created_Time = createDate.descriptionStr()
+//            }
+//        }
+//    }
+    /// 微博格式化之后的创建时间
+//    @objc var created_Time: String = ""
     ///字符串型的微博ID
-    var idstr: String?
+    @objc var idstr: String?
     /// 微博信息内容
-    var text: String?
+    @objc var text: String?
     ///微博来源
-    var source: String?
+    @objc var source: String?
+//        {
+//        didSet{
+//            if let sourceStr: NSString = source as NSString?, sourceStr != ""{
+//            //5.1获取从什么地方开始截取
+//                let startIndex = sourceStr.range(of: ">").location + 1
+//            //5.2获取截取的长度
+//                let length = sourceStr.range(of: "<", options: NSString.CompareOptions.backwards).location - startIndex
+//            //5.3截取字符串
+//                let rest = sourceStr.substring(with: NSMakeRange(startIndex, length))
+//            //赋值
+//                source_Text = "来自" + rest
+//            }
+//        }
+//    }
+    ///微博格式化之后的来源
+//    @objc var source_Text: String = ""
     ///微博作者的用户信息字段
-    var user: User?
+    @objc var user: User?
     
     init(dict: [String: AnyObject]) {
         super.init()
@@ -38,7 +66,6 @@ class Status: NSObject {
     
     //模型与数据不一一对应，重写此方法
     override func setValue(_ value: Any?, forUndefinedKey key: String) {
-        
     }
     //重写父类description方法，输出模型中的内容
     override var description: String{
