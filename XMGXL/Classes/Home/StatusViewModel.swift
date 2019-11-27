@@ -56,6 +56,23 @@ class StatusViewModel: NSObject {
             //赋值
             source_Text = "来自" + rest
         }
+        
+        ///处理配图url
+        //2.从模型中取出配图数组
+        if let picurls = status.pic_urls{
+            thumbnail_pic = [URL]()
+           //2.遍历配图数组下载图片
+           for dict in picurls {
+            //2.1取出图片URL字符串
+            guard let urlStr = dict["thumbnail_pic"] as? String else {
+                continue
+            }
+            //2.2根据字符串创建URL
+            let url = URL(string: urlStr)!
+            thumbnail_pic?.append(url)
+           }
+        }
+       
     }
     
     ///用户认证图片
@@ -68,4 +85,6 @@ class StatusViewModel: NSObject {
     @objc var created_Time: String = ""
     ///微博格式化之后的来源
       @objc var source_Text: String = ""
+    ///保存所有配图的url
+    @objc var thumbnail_pic: [URL]?
 }

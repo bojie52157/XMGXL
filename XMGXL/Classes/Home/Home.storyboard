@@ -132,7 +132,7 @@
                                         <constraint firstItem="PJC-jT-Yn3" firstAttribute="top" secondItem="rsX-ml-8LA" secondAttribute="bottom" constant="10" id="xIN-dU-Lrl"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.65860605409999995" green="1" blue="0.84226120240000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="contentLabel" destination="rsX-ml-8LA" id="r43-Hh-QI0"/>
                                     <outlet property="iconImageView" destination="mBw-sg-aT4" id="g5K-GR-Gqz"/>

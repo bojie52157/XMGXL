@@ -8,6 +8,7 @@
 
 import UIKit
 import SVProgressHUD
+import SDWebImage
 
 class HomeTableViewController: BaseTableViewController {
 
@@ -34,6 +35,10 @@ class HomeTableViewController: BaseTableViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(titleChange), name: NSNotification.Name(rawValue: XMGPresentationManagerDidDismiss), object: animatorManager)
         //4.获取微博数据
         loadData()
+        //5.动态加载行高
+        //尽量不要使用，约束复杂，容易造成约束混乱
+//        tableView.estimatedRowHeight = 200
+//        tableView.rowHeight = UITableViewAutomaticDimension
     }
 
     deinit {
@@ -59,8 +64,35 @@ class HomeTableViewController: BaseTableViewController {
                 let viewModel = StatusViewModel(status: status)
                 model.append(viewModel)
             }
-            //3.保存数据
-            self.statuses = model
+            //3.缓存微博所有配图
+            self.cachesImages(viewModels: model)
+        }
+    }
+    
+    ///缓存微博配图
+    private func cachesImages(viewModels:[StatusViewModel]){
+        //0.创建组
+        let group = DispatchGroup()
+        for viewModel in viewModels {
+            //1.从模型中取出配图数组
+            guard let picurls = viewModel.thumbnail_pic else{
+                continue
+            }
+            //2.遍历配图数组下载图片
+            for url in picurls {
+                //将当前的下载操作添加到组中
+                group.enter()
+                //3.3利用SDWebImage下载图片
+                SDWebImageManager.shared.loadImage(with: url, options: SDWebImageOptions(rawValue: 0), progress: nil) { (image, data, error, _, _, _) in
+                    //将当前的下载操作从组中移除
+                    group.leave()
+                }
+            }
+        //监听下载操作
+        group.notify(queue: DispatchQueue.main, work: DispatchWorkItem.init(block: {
+            //保存数据
+            self.statuses = viewModels
+        }))
         }
     }
     

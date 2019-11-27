@@ -48,6 +48,9 @@ class Status: NSObject {
 //    @objc var source_Text: String = ""
     ///微博作者的用户信息字段
     @objc var user: User?
+    ///配图数组
+    @objc var pic_urls: [[String : AnyObject]]?
+    
     
     init(dict: [String: AnyObject]) {
         super.init()
